@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <title>Age Calculator</title>
+</head>
+
+<body>
+
+  <!-- Elementos decorativos CSS -->
+  <div class="decor-zigzag"></div>
+  <div class="decor-dots"></div>
+  <div class="decor-wave"></div>
+
+  <div class="header">
+    <h1 class="title">
+      Welcome to the Age Calculator Application
+    </h1>
+  </div>
+
+  <div class="form-container">
+    <form class="form">
+      <table class="input-table">
+        <thead>
+          <tr class="table-header">
+            <td class="label">DAY</td>
+            <td class="label">MONTH</td>
+            <td class="label">YEAR</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-row">
+            <td class="input-cell">
+              <input type="number" id="day" name="day" class="input" min="1" max="31" required />
+              <span id="error-day" class="error-message"></span>
+            </td>
+            <td class="input-cell">
+              <input type="number" id="month" name="month" class="input" min="1" max="12" required />
+              <span id="error-month" class="error-message"></span>
+            </td>
+            <td class="input-cell">
+              <input type="number" id="year" name="year" class="input" min="1900" max="2100" required />
+              <span id="error-year" class="error-message"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="button" id="calculateButton" role="button" aria-label="Calculate Age">
+        <img src="/assets/images/icon-arrow.svg" alt="Calculate Age" class="img-button" />
+      </div>
+    </form>
+  </div>
+
+  <div class="results">
+    <label id="years" class="result-label">-- years</label>
+    <label id="months" class="result-label">-- months</label>
+    <label id="days" class="result-label">-- days</label>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

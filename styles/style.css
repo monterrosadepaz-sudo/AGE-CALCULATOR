@@ -1,0 +1,185 @@
+/* Tipografía */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  background-image: url('/assets/images/fondo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  color: hsl(0, 0%, 8%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Título */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: hsl(0, 0%, 20%);
+}
+
+/* Formulario */
+.form {
+  background-color: hsl(0, 0%, 94%);
+  padding: 2rem;
+  position: relative;
+  padding-right: 100px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Tabla de inputs */
+.input-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.table-header td {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: hsl(0, 1%, 44%);
+  text-transform: uppercase;
+  text-align: left;
+  padding-bottom: 0.5rem;
+}
+
+.input-cell {
+  padding: 0.5rem;
+}
+
+.input {
+  font-size: 32px;
+  font-weight: 700;
+  padding: 0.75rem;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+}
+
+.input.error {
+  border-color: hsl(0, 100%, 67%);
+  background-color: hsl(0, 100%, 95%);
+}
+
+.error-message {
+  color: hsl(0, 100%, 67%);
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  margin-top: 0.25rem;
+  text-align: left;
+}
+
+/* Botón */
+.button {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 64px;
+  height: 64px;
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.img-button {
+  width: 24px;
+  height: 24px;
+}
+
+/* Resultados */
+.results {
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 500px;
+  width: 100%;
+}
+
+.result-label {
+  font-size: 48px;
+  font-weight: 800;
+  color: hsl(259, 100%, 65%);
+  line-height: 1.2;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.decor-zigzag {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    45deg,
+    hsl(0, 100%, 70%) 0,
+    hsl(0, 100%, 70%) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  z-index: -1;
+}
+
+.decor-dots {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  width: 80px;
+  height: 80px;
+  background-image: radial-gradient(hsl(180, 100%, 70%) 20%, transparent 20%);
+  background-size: 20px 20px;
+  z-index: -1;
+}
+
+.decor-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 40px;
+  border-radius: 50% 50% 0 0;
+  background-color: hsl(180, 100%, 70%);
+  transform: rotate(-15deg);
+  z-index: -1;
+}
+
